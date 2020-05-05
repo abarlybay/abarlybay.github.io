@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- Так прописывать стили не стоит -->
+        <style>
+            /* Стили для фиксированной верстки */
+            .fixed_1 { display: inline-block; background: cyan; }
+            .fixed_2 { display: inline-block; background: orange; }
+            .fixed_1, .fixed_2 { width: 440px; }
+
+            /* Стили для резиновой верстки */
+            .rubber_1 { display: inline-block; background: cyan; }
+            .rubber_2 { display: inline-block; background: orange; }
+            .rubber_1, .rubber_2 { width: 50%; }
+
+            /* Стили для адаптивной верстки */
+            .adaptive_1 { display: inline-block; background: cyan; }
+            .adaptive_2 { display: inline-block; background: orange; }
+            .adaptive_1, .adaptive_2 { width: 430px; }
+            @media (max-width: 1220px) {
+                .adaptive_1, .adaptive_2 { width: 380px; }
+            }
+            @media (max-width: 1120px) {
+                .adaptive_1, .adaptive_2 { width: 325px; }
+            }
+            @media (max-width: 680px) {
+                .adaptive_1, .adaptive_2 { width: 200px; }
+            }
+
+            /* Стили для отзывчивой верстки */
+            .responsive_1 { display: inline-block; background: cyan; }
+            .responsive_2 { display: inline-block; background: orange; }
+            .responsive_1, .responsive_2 { width: 50%; }
+            @media (max-width: 1006px) {
+            .responsive_1, .responsive_2 { width: 100%; }
+            }
+
+        </style>
+            
+        <div class="fixed_1">фиксированная</div><div class="fixed_2">верстка</div>
+        <div class="rubber_1">резиновая</div><div class="rubber_2">верстка</div>
+        <div class="adaptive_1">адаптивная</div><div class="adaptive_2">верстка</div>
+        <div class="responsive_1">отзывчивая</div><div class="responsive_2">верстка</div>
+    </body>
+</html>
